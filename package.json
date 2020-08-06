@@ -1,0 +1,38 @@
+{
+  "name": "MeshTest",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "fix-permissions": "sudo chmod -R 755 .",
+    "build-backend-android": "./tools/build-backend.js --android",
+    "build-backend-android-fix": "./tools/build-backend.js --android --fix && npm run fix-permissions",
+    "build-backend-ios": "./tools/build-backend.js --ios",
+    "build-backend-ios-fix": "./tools/build-backend.js --ios --fix && npm run fix-permissions",
+    "android-dev": "npm run build-backend-android && react-native run-android --variant=debug",
+    "android": "npm run build-backend-android && react-native run-android --variant=release",
+    "ios-dev": "npm run build-backend-ios && react-native run-ios --configuration Debug --device \"iPhone\"",
+    "ios": "npm run build-backend-ios && react-native run-ios run-ios --configuration Release --device \"iPhone\"",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "nodejs-mobile-react-native": "^0.6.1",
+    "react": "16.13.1",
+    "react-native": "0.63.2",
+    "say": "^0.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/runtime": "^7.11.2",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.2.2",
+    "eslint": "^7.6.0",
+    "jest": "^26.2.2",
+    "metro-react-native-babel-preset": "^0.61.0",
+    "react-test-renderer": "16.13.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

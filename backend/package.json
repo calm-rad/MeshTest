@@ -1,0 +1,22 @@
+{
+  "name": "mesh-test-node-project",
+  "version": "0.0.1",
+  "description": "node part of mesh test",
+  "main": "main.js",
+  "engines": {
+    "node": "10.13.0"
+  },
+  "author": "Calm Rad",
+  "license": "AGPL-3.0-or-later",
+  "scripts": {
+    "postinstall": "patch-package"
+  },
+  "dependencies": {
+    "bindings-noderify-nodejs-mobile": "10.3.0",
+    "patch-package": "^6.2.2",
+    "utp-native": "^2.1.10"
+  },
+  "devDependencies": {
+    "noderify": "^5.0.0"
+  }
+}
